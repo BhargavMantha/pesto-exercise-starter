@@ -69,11 +69,11 @@ async function main() {
 
   info('Enter one or more space-separated question names.');
   const questionsString = await input('Questions? ');
-  if (questionsString === '') {
-    error('The question cannot be an empty string. Please enter a name.\n');
-    setUpUngracefulExit()
-    return;
-  }
+  // if (questionsString === '') {
+  //   error('The question cannot be an empty string. Please enter a name.\n');
+  //   setUpUngracefulExit()
+  //   return;
+  // }
 
   const questions = questionsString.split(' ');
 
@@ -90,7 +90,7 @@ async function main() {
     setUpUngracefulExit();
     return;
   }
-
+  console.log("questions",questions)
   for (const question of questions) {
     info(`Fetching files of ${question}`);
 
